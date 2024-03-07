@@ -1,0 +1,16 @@
+﻿  add.cpp
+C:\Users\power\source\repos\tutz\tutz\add.cpp(26,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(61,29): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(63,33): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(69,29): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(71,33): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(95,29): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(97,33): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(101,29): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(103,33): warning C4244: '=': conversion from 'double' to 'uchar', possible loss of data
+C:\Users\power\source\repos\tutz\tutz\add.cpp(132,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
+  tutz.vcxproj -> C:\Users\power\source\repos\tutz\x64\Debug\tutz.exe
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.

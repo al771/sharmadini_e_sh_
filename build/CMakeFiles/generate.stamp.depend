@@ -1,0 +1,49 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindTIFF.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.26/Modules/SelectLibraryConfigurations.cmake
+C:/Users/power/source/repos/tutz/CMakeLists.txt
+C:/Users/power/source/repos/tutz/build/CMakeFiles/3.26.0/CMakeCCompiler.cmake
+C:/Users/power/source/repos/tutz/build/CMakeFiles/3.26.0/CMakeCXXCompiler.cmake
+C:/Users/power/source/repos/tutz/build/CMakeFiles/3.26.0/CMakeRCCompiler.cmake
+C:/Users/power/source/repos/tutz/build/CMakeFiles/3.26.0/CMakeSystem.cmake
+M:/vcpkg/installed/x64-windows/share/opencv/OpenCVConfig-version.cmake
+M:/vcpkg/installed/x64-windows/share/opencv/OpenCVConfig.cmake
+M:/vcpkg/installed/x64-windows/share/opencv/OpenCVModules-debug.cmake
+M:/vcpkg/installed/x64-windows/share/opencv/OpenCVModules-release.cmake
+M:/vcpkg/installed/x64-windows/share/opencv/OpenCVModules.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-config-version.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-config.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-module.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-options.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-debug.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets-release.cmake
+M:/vcpkg/installed/x64-windows/share/protobuf/protobuf-targets.cmake
+M:/vcpkg/installed/x64-windows/share/quirc/quirc-config-debug.cmake
+M:/vcpkg/installed/x64-windows/share/quirc/quirc-config-release.cmake
+M:/vcpkg/installed/x64-windows/share/quirc/quirc-config.cmake
