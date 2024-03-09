@@ -1,0 +1,3 @@
+C:/Users/power/source/repos/tutz/buils/CMakeFiles/DistanceTransform.dir
+C:/Users/power/source/repos/tutz/buils/CMakeFiles/ALL_BUILD.dir
+C:/Users/power/source/repos/tutz/buils/CMakeFiles/ZERO_CHECK.dir

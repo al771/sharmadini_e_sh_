@@ -79,8 +79,6 @@ cv::Mat distanceTransform(cv::Mat img) {
 
         }
     }
-
-
     // bottom to top and right to left   
     for (int j = cols - 1; j >= 0; j--) {
         for (int i = rows - 1; i >= 0; i--) {
@@ -127,7 +125,7 @@ void generateLaTeXCode(const cv::Mat& image, const std::string& latexFilename) {
 
     latexFile << "\\addplot3[surf,]\n"
         << "coordinates {\n";
-    std::cout << image.rows << " " << image.cols << "\n";
+   
     int imageSize = image.rows * image.cols;
     int step = std::sqrt(imageSize / 1000);
 
