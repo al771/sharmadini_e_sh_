@@ -5,13 +5,24 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+
+/**
+ * \file add.cpp
+ * \brief Набор функций
+ */
+
+
 //using namespace cv;
-uchar inf = 255;
-
-//using namespace std;
-//D:/imagesCV/mouse.jpg
+uchar inf = 255; ///< Максимальное значение пикселя для изображений в оттенках серого.
 
 
+
+/**
+ * @brief Загружает изображение в оттенках серого.
+ * @param s Путь к изображению.
+ * @return Изображение в формате cv::Mat.
+ * @exception std::runtime_error Если изображение не может быть загружено.
+ */
 cv::Mat loadImage(std::string s) {
     cv::Mat img = cv::imread(s, cv::IMREAD_GRAYSCALE);
     if (img.empty()) {
@@ -21,6 +32,11 @@ cv::Mat loadImage(std::string s) {
 
 }
 
+/**
+ * @brief Инвертирует изображение, если на нем больше черных пикселей, чем белых.
+ * @param img Исходное изображение в оттенках серого.
+ * @return Изображение с возможно измененным фоном.
+ */
 cv::Mat toWhiteBackground(cv::Mat img) {
     cv::Mat invertedImg;
     int totalPixels = img.total();
@@ -34,6 +50,11 @@ cv::Mat toWhiteBackground(cv::Mat img) {
 
 }
 
+/**
+ * @brief Выполняет преобразование расстояния на изображении.
+ * @param img Исходное изображение в оттенках серого.
+ * @return Изображение после применения преобразования расстояния.
+ */
 cv::Mat distanceTransform(cv::Mat img) {
     double m1 = 1;
     double m2 = 2;
@@ -112,7 +133,11 @@ cv::Mat distanceTransform(cv::Mat img) {
     return dstr;
 }
 
-
+/**
+ * @brief Генерирует LaTeX код для визуализации изображения как 3D поверхности.
+ * @param image Изображение для визуализации.
+ * @param latexFilename Имя файла для сохранения сгенерированного LaTeX кода.
+ */
 void generateLaTeXCode(const cv::Mat& image, const std::string& latexFilename) {
     std::ofstream latexFile(latexFilename);
 

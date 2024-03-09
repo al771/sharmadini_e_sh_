@@ -2,19 +2,25 @@
 
 #include "add.h"
 
-//using namespace cv;
+
+/**
+ * \file main.cpp
+ * \brief Главный исполняемый файл программы обработки изображений.
+ */
 
 
-
-
-
+ /**
+  * \brief Главная функция программы.
+  * \param argc Количество аргументов командной строки.
+  * \param argv Массив аргументов командной строки.
+  * \return Возвращает 0 в случае успеха, 1 в случае ошибки.
+  *
+  * Программа принимает путь к изображению и строку команды ('demo' или 'vis').
+  * В зависимости от команды выполняется соответствующий режим работы с изображением.
+  */
 int main(int argc, char* argv[]) {
 
-    /*
-    std::cout << "Enter the path to image (only jpg, jpeg or png and only Latin words) \n";
-    std::string path;
-    std::getline(std::cin, path);
-    */
+    
 
     cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_SILENT);
  
@@ -49,22 +55,12 @@ int main(int argc, char* argv[]) {
     cv::Mat distanceTransformedImg;
     distanceTransformedImg = distanceTransform(imgWithWhiteBg);
 
-    /*
-    std::cout << "If you whant demonstation enter 'demo' if you whant visualisation enter 'vis'\n";
-    std::string comand;
-    std::getline(std::cin, comand);
-    */
+   
 
     if (command != "demo" && command != "vis")
         std::cout << "No comand " << command << ". Try again\n";
     else if (command == "demo") {
-        /*
-        cv::namedWindow("First OpenCV Application", cv::WINDOW_AUTOSIZE);
-        cv::imshow("First OpenCV Application", distanceTransformedImg);
-        cv::moveWindow("First OpenCV Application", 0, 45);
-        cv::waitKey(0);
-        cv::destroyAllWindows();
-        */
+      
         bool isSuccess = cv::imwrite("../../out/image.jpg", distanceTransformedImg); 
 
         if (isSuccess) {
