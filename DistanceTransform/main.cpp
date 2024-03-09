@@ -16,6 +16,8 @@ int main(int argc, char* argv[]) {
     std::getline(std::cin, path);
     */
 
+    cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_SILENT);
+ 
     if (argc < 3) {
         std::cerr << "Usage: " << argv[0] << " <path> <string>\n";
         return 1;
@@ -31,7 +33,8 @@ int main(int argc, char* argv[]) {
             imageLoadedSuccessfully = true;
         }
         catch (const std::exception& e) {
-            std::cerr << e.what() << ". Try again \n";
+            std::cerr << "Try again \n";
+            return 1;
       
         }
     
@@ -74,12 +77,14 @@ int main(int argc, char* argv[]) {
     }
     else if (command == "vis")
     {
-        bool isSuccess = generateLaTeXCode(distanceTransformedImg, "../../out/test.tex");
-        if (isSuccess) {
+        try {
+            generateLaTeXCode(distanceTransformedImg, "../../out/test.tex");
             std::cout << "Latex file saved successfully." << std::endl;
         }
-        else {
+        
+        catch (const std::exception& e) {
             std::cout << "Error: Failed to save the Latex file." << std::endl;
+           
         }
     }
 
