@@ -1,11 +1,16 @@
 *.vcxproj
 *.vcxproj.filters
+*.vcxproj.user
 CMakeCache.txt
 *.sln
 x64
 .vs
 buils
+build
 CMakeFiles
 DistanceTransform.dir
 Documentation
+out
 Release
+x64
+cmake_install.cmake
