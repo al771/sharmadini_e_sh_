@@ -1,0 +1,11 @@
+*.vcxproj
+*.vcxproj.filters
+CMakeCache.txt
+*.sln
+x64
+.vs
+buils
+CMakeFiles
+DistanceTransform.dir
+Documentation
+Release
