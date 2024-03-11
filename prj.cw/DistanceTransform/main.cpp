@@ -5,18 +5,18 @@
 
 /**
  * \file main.cpp
- * \brief Главный исполняемый файл программы обработки изображений.
+ * \brief пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
  */
 
 
  /**
-  * \brief Главная функция программы.
-  * \param argc Количество аргументов командной строки.
-  * \param argv Массив аргументов командной строки.
-  * \return Возвращает 0 в случае успеха, 1 в случае ошибки.
+  * \brief пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+  * \param argc пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+  * \param argv пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+  * \return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 0 пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, 1 пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
   *
-  * Программа принимает путь к изображению и строку команды ('demo' или 'vis').
-  * В зависимости от команды выполняется соответствующий режим работы с изображением.
+  * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ('demo' пїЅпїЅпїЅ 'vis').
+  * пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
   */
 int main(int argc, char* argv[]) {
 
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_SILENT);
  
     if (argc < 3) {
-        std::cerr << "Usage: " << argv[0] << " <path> <string>\n";
+        std::cerr << "Usage: <path> <command>\n";
         return 1;
     }
     std::string path = argv[1];
@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
         std::cout << "No comand " << command << ". Try again\n";
     else if (command == "demo") {
       
-        bool isSuccess = cv::imwrite("../../out/image.jpg", distanceTransformedImg); 
+        bool isSuccess = cv::imwrite("../../result/image.jpg", distanceTransformedImg); 
 
         if (isSuccess) {
             std::cout << "Image saved successfully." << std::endl;
@@ -74,7 +74,7 @@ int main(int argc, char* argv[]) {
     else if (command == "vis")
     {
         try {
-            generateLaTeXCode(distanceTransformedImg, "../../out/test.tex");
+            generateLaTeXCode(distanceTransformedImg, "../../result/test.tex");
             std::cout << "Latex file saved successfully." << std::endl;
         }
         
