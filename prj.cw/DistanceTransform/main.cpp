@@ -5,18 +5,18 @@
 
 /**
  * \file main.cpp
- * \brief Главный исполняемый файл программы обработки изображений.
+ * \brief пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
  */
 
 
  /**
-  * \brief Главная функция программы.
-  * \param argc Количество аргументов командной строки.
-  * \param argv Массив аргументов командной строки.
-  * \return Возвращает 0 в случае успеха, 1 в случае ошибки.
+  * \brief пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+  * \param argc пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+  * \param argv пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
+  * \return пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 0 пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, 1 пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ.
   *
-  * Программа принимает путь к изображению и строку команды ('demo' или 'vis').
-  * В зависимости от команды выполняется соответствующий режим работы с изображением.
+  * пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ('demo' пїЅпїЅпїЅ 'vis').
+  * пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
   */
 int main(int argc, char* argv[]) {
 
@@ -61,10 +61,12 @@ int main(int argc, char* argv[]) {
         std::cout << "No comand " << command << ". Try again\n";
     else if (command == "demo") {
       
-        bool isSuccess = cv::imwrite("../../out/image.jpg", distanceTransformedImg); 
+        bool isSuccess1 = cv::imwrite("../out/binimage.jpg", binaryImage); 
+        bool isSuccess2 = cv::imwrite("../out/dtimage.jpg", distanceTransformedImg); 
 
-        if (isSuccess) {
-            std::cout << "Image saved successfully." << std::endl;
+
+        if ( isSuccess2) {
+            std::cout << "Images saved successfully." << std::endl;
         }
         else {
             std::cout << "Error: Failed to save the image." << std::endl;
@@ -74,7 +76,7 @@ int main(int argc, char* argv[]) {
     else if (command == "vis")
     {
         try {
-            generateLaTeXCode(distanceTransformedImg, "../../out/test.tex");
+            generateLaTeXCode(distanceTransformedImg, "../out/test.tex");
             std::cout << "Latex file saved successfully." << std::endl;
         }
         
