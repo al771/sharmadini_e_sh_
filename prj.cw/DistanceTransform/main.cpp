@@ -24,12 +24,13 @@ int main(int argc, char* argv[]) {
 
     cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_SILENT);
  
-    if (argc < 3) {
-        std::cerr << "Usage: " << argv[0] << " <path> <string>\n";
+    if (argc < 4) {
+        std::cerr << "Usage: <path_from> <path_to> <command>\n";
         return 1;
     }
-    std::string path = argv[1];
-    std::string command = argv[2];
+    std::string path_rom = argv[1];
+    std::string path_to = argv[2];
+    std::string command = argv[3];
     cv::Mat img;
 
     bool imageLoadedSuccessfully = false;
@@ -61,8 +62,8 @@ int main(int argc, char* argv[]) {
         std::cout << "No comand " << command << ". Try again\n";
     else if (command == "demo") {
       
-        bool isSuccess1 = cv::imwrite("../out/binimage.jpg", binaryImage); 
-        bool isSuccess2 = cv::imwrite("../out/dtimage.jpg", distanceTransformedImg); 
+        bool isSuccess1 = cv::imwrite("../../result/binimage.jpg", binaryImage); 
+        bool isSuccess2 = cv::imwrite("../../result/dtimage.jpg", distanceTransformedImg); 
 
 
         if ( isSuccess2) {
@@ -76,7 +77,7 @@ int main(int argc, char* argv[]) {
     else if (command == "vis")
     {
         try {
-            generateLaTeXCode(distanceTransformedImg, "../out/test.tex");
+            generateLaTeXCode(distanceTransformedImg, "../../result/test.tex");
             std::cout << "Latex file saved successfully." << std::endl;
         }
         
